@@ -24,6 +24,10 @@ For axis if right moves it will add from previous axis and for left move it will
 		  3. direction is `SOUTH` ... rotate bot into `EAST direction`
 		  4. direction is `EAST` ... rotate bot into `NORTH direction`
 3. Print rotated direction + current axis
+
+# Technical requisites
+Basic knowledge of Java Arrays , Hashmap and OOP is required for this task. 
+
 # How to run?
 
 For java, There is `PathBot.jar` , which can be run using `java -jar PathBot.jar RM15 LM10`. <br>
