@@ -34,10 +34,27 @@ for text in plaintext:
     moveN = int(text[2:])
     if(direction in RIGHT):
         initial_position["axis"] = (initial_position["axis"][0] + moveN, initial_position["axis"][1])
-        initial_position["direction"] = RIGHT[1]
+        match initial_position["direction"]:
+            case 'NORTH':
+                initial_position["direction"] = RIGHT[1]
+            case 'EAST':
+                initial_position["direction"] = SOUTH[1]
+            case 'SOUTH':
+                initial_position["direction"] = LEFT[1]
+            case 'WEST' :
+                initial_position["direction"] = NORTH[1]
+
     if(direction in LEFT):
         initial_position["axis"] = (initial_position["axis"][0] - moveN, initial_position["axis"][1])
-        initial_position["direction"] = LEFT[1]
+        match initial_position["direction"]:
+            case 'NORTH':
+                initial_position["direction"] = LEFT[1]
+            case 'WEST':
+                initial_position["direction"] = SOUTH[1]
+            case 'SOUTH':
+                initial_position["direction"] = RIGHT[1]
+            case 'EAST' :
+                initial_position["direction"] = NORTH[1]
 
     # break
 
